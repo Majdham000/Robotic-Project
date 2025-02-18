@@ -1,0 +1,502 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/kuka/youbot/protos/KukaBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/kuka/youbot/protos/Youbot.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+
+WorldInfo {
+  info [
+    "Simulation of the KUKA youBot robot."
+    "This model includes an accurate and fast simulation of the Meccanum wheels."
+    "The robot can be equiped with various sensors (including the Microsoft Kinect) and configured with zero, one or two arms."
+  ]
+  title "KUKA youBot"
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material1 "InteriorWheelMat"
+      coulombFriction [
+        0, 2, 0
+      ]
+      frictionRotation -0.785398 0
+      bounce 0
+      forceDependentSlip [
+        10, 0
+      ]
+    }
+    ContactProperties {
+      material1 "ExteriorWheelMat"
+      coulombFriction [
+        0, 2, 0
+      ]
+      frictionRotation 0.785398 0
+      bounce 0
+      forceDependentSlip [
+        10, 0
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.13966234544543366 0.06275198719755395 0.9882087923953309 2.3058828970557497
+  position 7.490796544522426 -8.090628868536289 2.8070001059804324
+  follow "youBot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  tileSize 1 1
+  appearance Appearance {
+    texture ImageTexture {
+      url [
+        "../../../Desktop/ground - Copy.png"
+      ]
+    }
+    textureTransform TextureTransform {
+      rotation 1.57
+      scale 0.1 0.1
+    }
+  }
+}
+WoodenBox {
+  translation 4.28545 4.32122 0.2
+  rotation 0 0 1 -1.5707963267948966
+  size 0.6 0.6 0.4
+}
+KukaBox {
+  translation 2.63263 -3.5429 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  color 0.666667 0 0
+}
+KukaBox {
+  translation 2.43263 -3.5429 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(4)"
+  color 0.666667 0 0
+}
+KukaBox {
+  translation 2.80263 -3.5429 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(5)"
+  color 0.666667 0 0
+}
+KukaBox {
+  translation 2.23263 -3.5429 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(6)"
+  color 0.666667 0 0
+}
+KukaBox {
+  translation 2.43263 -1.9129 0.0124917
+  rotation 3.1579677144893976e-17 1.2631870857957571e-17 -1 1.5707963267948966
+  name "Kuka box(1)"
+  color 0 0.666667 0
+}
+KukaBox {
+  translation 2.63263 -1.9129 0.0124917
+  rotation 3.1579677144893976e-17 1.2631870857957571e-17 -1 1.5707963267948966
+  name "Kuka box(13)"
+  color 0 0.666667 0
+}
+KukaBox {
+  translation 2.80263 -1.9129 0.0124917
+  rotation 3.1579677144893976e-17 1.2631870857957571e-17 -1 1.5707963267948966
+  name "Kuka box(14)"
+  color 0 0.666667 0
+}
+KukaBox {
+  translation 2.23263 -1.9129 0.0124917
+  rotation 3.1579677144893976e-17 1.2631870857957571e-17 -1 1.5707963267948966
+  name "Kuka box(15)"
+  color 0 0.666667 0
+}
+KukaBox {
+  translation 2.43263 -2.9929 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(2)"
+  color 1 1 0
+}
+KukaBox {
+  translation 2.80263 -2.9929 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(7)"
+  color 1 1 0
+}
+KukaBox {
+  translation 2.63263 -2.9929 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(8)"
+  color 1 1 0
+}
+KukaBox {
+  translation 2.23263 -2.9929 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(9)"
+  color 1 1 0
+}
+KukaBox {
+  translation 2.43263 -2.4629 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(3)"
+  color 0 0 0.498039
+}
+KukaBox {
+  translation 2.80263 -2.4629 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(10)"
+  color 0 0 0.498039
+}
+KukaBox {
+  translation 2.63263 -2.4629 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(11)"
+  color 0 0 0.498039
+}
+KukaBox {
+  translation 2.24263 -2.4629 0.0124917
+  rotation -3.789561257387169e-17 1.8947806286936023e-17 -1 1.5707963267948966
+  name "Kuka box(12)"
+  color 0 0 0.498039
+}
+Youbot {
+  translation 0.00718424 -4.68676 0.103843
+  rotation 0.0010329898848240309 0.0010751398801244047 0.9999988885024503 1.57242
+  controller "my_controller_project"
+  controllerArgs [
+    "demo"
+  ]
+  synchronization FALSE
+  bodySlot [
+    Receiver {
+    }
+    Emitter {
+    }
+    Compass {
+    }
+    DistanceSensor {
+      translation 0.28 -0.015 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs0"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 -0.03 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 -0.045 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs2"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 -0.11 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs3"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.015 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs4"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.03 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs5"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.045 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs6"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.11 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs7"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0 -0.09
+      rotation 0 1 0 0
+      name "box_sensor"
+      type "sonar"
+    }
+    GPS {
+    }
+    Camera {
+      translation 0.28 0 -0.08
+      rotation 0 1 0 1.5708003061004252
+      fieldOfView 1e-05
+      width 1
+      height 1
+    }
+  ]
+}
+Youbot {
+  translation -0.00818199 4.65304 0.103702
+  rotation 0.001076889876031093 -0.0010346698808913546 0.9999988848825944 -1.5691753071795862
+  name "youBot(1)"
+  controller "my_controller_project_1"
+  controllerArgs [
+    "demo"
+  ]
+  synchronization FALSE
+  bodySlot [
+    Emitter {
+    }
+    Receiver {
+    }
+    DistanceSensor {
+      translation 0.28 -0.015 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs0"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 -0.03 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 -0.045 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs2"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 -0.11 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs3"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.015 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs4"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.03 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs5"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.045 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs6"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.11 -0.07
+      rotation 0 1 0 1.5707996938995747
+      name "lfs7"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.28 0.01 0.08
+      rotation 0 1 0 0
+      name "box_sensor"
+      type "sonar"
+    }
+    DistanceSensor {
+      translation 0.28 -0.01 0.08
+      rotation 0 1 0 0
+      name "box_sensor(1)"
+      type "sonar"
+    }
+    GPS {
+    }
+    Camera {
+      translation 0.28 0 -0.08
+      rotation 0 1 0 1.5708003061004252
+      fieldOfView 1e-05
+      width 1
+      height 1
+    }
+  ]
+}
+Solid {
+  translation -3.293273961931773e-07 -4.099999999372931 0.004980379973375585
+  rotation -0.006621842396138939 0.0001501264128287406 -0.9999780640920782 9.781896869195225e-07
+  children [
+    DEF b1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.666667 0 0
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.01
+      }
+    }
+  ]
+  boundingObject USE b1
+  physics Physics {
+  }
+}
+Solid {
+  translation 8.284755305053006e-06 4.270000002582409 0.004980380018749606
+  rotation -0.033921264163000044 -0.000407055656513392 -0.9994244254285948 1.007163485252963e-06
+  children [
+    DEF b1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.666667 0 0
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.01
+      }
+    }
+  ]
+  name "solid(4)"
+  boundingObject USE b1
+  physics Physics {
+  }
+}
+Solid {
+  translation -6.93896306581005e-08 -3.9999999977278176 0.004980380009235293
+  rotation -0.14544868221406146 0.0006851589642147703 -0.9893655600430947 2.426935433443278e-07
+  children [
+    DEF b1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0 0.498039
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.01
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE b1
+  physics Physics {
+  }
+}
+Solid {
+  translation 1.7019684015159979e-06 4.169999998002685 0.004980379963256804
+  rotation 0.09876612701869215 0.003438610495542518 -0.9951047322325363 2.3443195176784524e-07
+  children [
+    DEF b1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0 0.498039
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.01
+      }
+    }
+  ]
+  name "solid(5)"
+  boundingObject USE b1
+  physics Physics {
+  }
+}
+Solid {
+  translation -2.311173189814658e-09 -4.300000000260875 0.0049803800103816855
+  rotation 0.5160110269643313 -0.01991927124461055 -0.8563503037217303 1.147530054635285e-08
+  children [
+    DEF b1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 0
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.01
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE b1
+  physics Physics {
+  }
+}
+Solid {
+  translation 5.728809909664633e-08 3.9699999998742084 0.004980380001416808
+  rotation 0.2887216004453379 -0.005310670424348854 -0.9573983675648955 9.027064382442512e-09
+  children [
+    DEF b1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 0
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.01
+      }
+    }
+  ]
+  name "solid(7)"
+  boundingObject USE b1
+  physics Physics {
+  }
+}
+Solid {
+  translation -1.5454100062496975e-08 -4.200000002640952 0.0049803800070074315
+  rotation 0.44607050102242457 -0.001030704958495327 -0.8949972322666095 8.204295383276639e-08
+  children [
+    DEF b1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0.666667 0
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.01
+      }
+    }
+  ]
+  name "solid(3)"
+  boundingObject USE b1
+  physics Physics {
+  }
+}
+Solid {
+  translation 3.8416529438005226e-07 4.069999999541653 0.004980380016586534
+  rotation 0.15734183069327692 -0.006491895434034228 -0.9875228623215573 5.3635024845629246e-08
+  children [
+    DEF b1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0.666667 0
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.01
+      }
+    }
+  ]
+  name "solid(6)"
+  boundingObject USE b1
+  physics Physics {
+  }
+}
+Wall {
+  translation 1.98348e-06 -0.54 0
+  rotation 0 0 1 1.5708
+  size 0.1 10 0.17
+  appearance Roughcast {
+    colorOverride 0 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
