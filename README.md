@@ -39,10 +39,7 @@ This project is a robotic control system implemented using Webots and Python. It
    ```sh
    cd robot_controller
    ```
-4. Run the controller script:
-   ```sh
-   python my_controller_project.py
-   ```
+4. Open the world using Webots.
 
 ## Configuration
 - The PID control parameters can be adjusted in the script.
